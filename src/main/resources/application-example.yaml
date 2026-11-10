@@ -1,0 +1,25 @@
+# Plantilla de configuración. Copiar como application.yaml (que no se sube a
+# git) y completar los valores reales.
+
+spring:
+  application:
+    name: climalert
+
+weatherapi:
+  base-url: https://api.weatherapi.com/v1
+  api-key: TU_API_KEY
+  ubicacion: Buenos Aires
+
+resend:
+  api-key: TU_API_KEY_DE_RESEND
+
+climalert:
+  monitoreo:
+    intervalo-ms: 300000   # 5 minutos
+  alertas:
+    intervalo-ms: 60000    # 1 minuto
+    umbral-temperatura: 35
+    umbral-humedad: 60
+  notificaciones:
+    origen: "Climalert <onboarding@resend.dev>"
+    destinatarios: admin@clima.com, emergencias@clima.com, meteorologia@clima.com
